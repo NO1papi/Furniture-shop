@@ -1,0 +1,155 @@
+.filters-container {
+  background: #f0f7ff;
+  padding: 20px 20px 0px 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  margin: 20px auto 0 auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Gornji deo - pretraga i filteri */
+.filters {
+  display: flex;
+  gap: 15px;
+  justify-content: space-between;
+}
+
+.search-input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.filter-dropdown {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Sekcija ispod filtera */
+.filter-options {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 15px;
+}
+
+/* Slajder za cenu */
+.price-filter {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.price-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.price-slider {
+  width: 200px;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 6px;
+  background: #007bff;
+  outline: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.price-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.price-range {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Free Shipping checkbox - sada ispod slajdera */
+.free-shipping {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-top: 45px;
+  position: relative;
+  left: -520px; /* Pomeri ga levo */
+}
+
+/* Dugmad su sada u redu sa filterima */
+.buttons {
+  display: flex;
+  gap: 15px;
+  position: relative;
+  right: -650px; /* Pomeri ih desno */
+  top: -70px;
+  margin-bottom: 0;
+}
+
+.btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+}
+
+.search-btn {
+  background: #007bff;
+  color: white;
+}
+
+.search-btn:hover {
+  background: #0056b3;
+}
+
+.reset-btn {
+  background: #d63384;
+  color: white;
+}
+
+.reset-btn:hover {
+  background: #a61e5c;
+}
+
+input[type="checkbox"] {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+}
+
+/* Kada je checkbox čekiran, pozadina postaje plava */
+input[type="checkbox"]:checked {
+  background-color: #007bff;
+  border-color: #0056b3;
+}
+
+/* Dodaj beli znak unutar checkbox-a kada je čekiran */
+input[type="checkbox"]:checked::after {
+  content: "✔";
+  font-size: 16px;
+  color: white;
+  position: absolute;
+  left: 3px;
+  top: -1px;
+}
